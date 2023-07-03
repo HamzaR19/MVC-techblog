@@ -1,1 +1,3 @@
 # MVC-techblog
+
+NEED TO ADD README
