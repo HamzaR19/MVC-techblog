@@ -1,0 +1,12 @@
+{{> header}}
+
+<main>
+  <h2>Most Recent Posts</h2>
+  {{#each posts}}
+  <article>
+    <h3>{{title}}</h3>
+    <p>By {{user.username}}</p>
+    <p>{{content}}</p>
+  </article>
+  {{/each}}
+</main>
