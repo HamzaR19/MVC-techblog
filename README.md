@@ -15,6 +15,7 @@ Hamza Rahman's README
  * [Link](#Link)
 
  * [Image](#Image)
+![14-mvc-homework-demo-01](https://github.com/HamzaR19/MVC-techblog/assets/132932060/647ecdc2-9d66-4956-b83a-2984eeda09ec)
 
  * [License](#license)
 
