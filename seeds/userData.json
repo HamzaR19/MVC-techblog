@@ -1,0 +1,50 @@
+[
+
+{
+    "name": "John",
+    "email": "john@gmail.com",
+    "password": "john12312321"
+},
+{
+    "name": "Emily",
+    "email": "emily@gmail.com",
+    "password": "emily4561232"
+},
+{
+    "name": "Michael",
+    "email": "michael@gmail.com",
+    "password": "michael789123"
+},
+{
+    "name": "Sophia",
+    "email": "sophia@gmail.com",
+    "password": "sophia32111"
+},
+{
+    "name": "Daniel",
+    "email": "daniel@gmail.com",
+    "password": "daniel987"
+},
+{
+    "name": "Olivia",
+    "email": "olivia@gmail.com",
+    "password": "olivia65456"
+},
+{
+    "name": "William",
+    "email": "william@gmail.com",
+    "password": "william123"
+},
+
+{
+    "name": "Isabella",
+    "email": "Isabella@gmail.com",
+    "password": "isabella456"
+},
+
+{
+    "name": "James",
+    "email": "James123@gmail.com",
+    "password": "james123"
+}
+]
