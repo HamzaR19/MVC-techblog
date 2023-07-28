@@ -1,29 +1,72 @@
-{{> header}}
 
-<main>
-  <h2>Dashboard</h2>
-  <h3>Create a New Post</h3>
-  <form id="create-post-form">
-    <div>
-      <label for="title">Title</label>
-      <input type="text" id="title" name="title" required>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Blog Profile</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="https://www.transparentpng.com/thumb/naruto/bzTfon-ninja-nassau-weekly-picture.png" alt="ninja nassau naruto png hd picture @transparentpng.com"
+          alt="Profile Picture" class="img-fluid" width="200" height="200">
+      </div>
+      <div class="col-md-8">
+        <h1>Name: {{name}}</h1>
+        <p>Email: {{email}}</p>
+      </div>
     </div>
-    <div>
-      <label for="content">Content</label>
-      <textarea id="content" name="content" required></textarea>
+    <ul class="list-group">
+      <!-- List items can be added here if needed -->
+    </ul>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <h3>Create New Post:</h3>
+
+      <form class="form new-project-form">
+        <div class="form-group">
+          <label for="project-name">Subject:</label>
+          <input class="form-control" type="text" id="project-name" name="project-name" />
+        </div>
+        <div class="form-group">
+          <label for="project-desc">Comment:</label>
+          <textarea class="form-control" id="project-desc" name="project-desc"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Post</button>
+        </div>
+      </form>
     </div>
-    <button type="submit">Create Post</button>
-  </form>
-  <h3>Your Posts</h3>
-  {{#each posts}}
-  <article>
-    <h4>{{title}}</h4>
-    <p>{{content}}</p>
-    <div>
-      <button class="edit-post" data-id="{{id}}">Edit</button>
-      <button class="delete-post" data-id="{{id}}">Delete</button>
-      <button class="logout">Logout</button>
+
+    {{#if projects.length}}
+    <div class="col-md-6 project-list">
+      <h3>Your Posts:</h3>
+
+      {{#each projects as |project|}}
+      <div class="row mb-2">
+        <div class="col-md-8">
+          <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+        </div>
+      </div>
+      {{/each}}
     </div>
-  </article>
-  {{/each}}
-</main>
+    {{/if}}
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+
+</html>
